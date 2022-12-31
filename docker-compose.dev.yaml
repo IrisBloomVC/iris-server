@@ -1,0 +1,26 @@
+version: '3'
+services:
+  server:
+    image: node:lts
+    restart: always
+    ports:
+      - 3000:3000
+    volumes:
+      - ./server:/iris
+    working_dir: /iris
+    env_file:
+      - .config/db.env
+    depends_on:
+      - db
+    tty: true
+  
+  db:
+    image: postgres:15-alpine
+    restart: always
+    env_file:
+      - .config/db.env
+    volumes:
+      - ./db:/var/lib/postgresql/data
+
+volumes:
+  node_modules:
