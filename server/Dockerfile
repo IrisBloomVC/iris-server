@@ -30,7 +30,7 @@ COPY ./prisma ./prisma
 COPY --from=build /iris/dist/main.js .
 COPY --from=modules /iris/node_modules ./node_modules
 COPY --from=lib /lib/libz.so.1 /lib/libz.so.1
-COPY --from=lib /lib/libc.musl-x86_64.so.1 /lib/libc.musl-x86_64.so.1
+COPY --from=lib /lib/libc.musl-*.so.1 /lib/
 
 EXPOSE 3000
 
