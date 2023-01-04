@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-import { VitePluginNode } from 'vite-plugin-node';
+import { VitePluginNode } from '@roenlie/vite-plugin-node';
 
 export default defineConfig({
   server: {
