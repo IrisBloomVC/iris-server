@@ -1,0 +1,4 @@
+[submodule "server/vite-plugin-node"]
+	path = server/vite-plugin-node
+	url = https://github.com/Filyus/vite-plugin-node.git
+	branch = origin/vite_4
