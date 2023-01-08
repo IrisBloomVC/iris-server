@@ -1,7 +1,9 @@
 version: '3.9'
 services:
   server:
-    image: node:lts
+    build: 
+      context: server
+      dockerfile: Dockerfile.dev
     restart: always
     ports:
       - 3000:3000
@@ -21,6 +23,3 @@ services:
       - .config/db.env
     volumes:
       - ./db:/var/lib/postgresql/data
-
-volumes:
-  node_modules:

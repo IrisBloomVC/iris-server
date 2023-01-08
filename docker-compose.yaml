@@ -9,7 +9,6 @@ services:
       - .config/db.env
     depends_on:
       - db
-    init: true
   
   db:
     image: postgres:15-alpine
